@@ -14,8 +14,12 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    body {
-        background-color: pink;
+    [data-testid="stAppViewContainer"] {
+        background-color: #ffc0cb;
+    }
+
+    [data-testid="stHeader"] {
+        background-color: #ffc0cb;
     }
     </style>
     """,
