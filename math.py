@@ -2,16 +2,17 @@ import streamlit as st
 import numpy as np 
 import matplotlib.pyplot as plt 
 from pathlib import Path
-st.set_page_config( page_title="Equação do 1o Grau", page_icon=" ", 📈 layout="centered" )
+
+st.set_page_config( page_title="Equação do 1o Grau", page_icon=" 📈 ", layout="centered" )
 PASTA_APP = Path(file).parent
 CAMINHO_LOGO = PASTA_APP / "mat.jpeg"
 if CAMINHO_LOGO.exists():
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.image(str(CAMINHO_LOGO),use_container_width=True)
-else: st.warning( " A imagem mat.jpeg não foi encontrada." ⚠️ )
+else: st.warning( "⚠️ A imagem mat.jpeg não foi encontrada."  )
 
-st.title(" Equação do 1o Grau") 📈
+st.title("📈 Equação do 1o Grau") 
 st.write("Equação no formato:")
 st.latex(r"ax + b = 0")
 a = st.number_input( "Digite o valor de a", value=1, step=1 )
@@ -42,7 +43,7 @@ else:
     st.latex(f"x = \\frac{{{-b}}}{{{a}}}")
     st.latex(f"x = {x_raiz:.2f}")
 
-st.subheader(" Gráfico da função" 📊)
+st.subheader(" 📊 Gráfico da função")
 x = np.linspace(x_raiz - 10,x_raiz + 10,500)
 y = a * x + b
 fig, ax = plt.subplots(figsize=(8, 5))
@@ -58,4 +59,4 @@ ax.legend()
 st.pyplot(fig)
 plt.close(fig)
 st.divider()
-st.caption( " Calculadora de Equação do 1o Grau" 📚 )
+st.caption( "📚  Calculadora de Equação do 1o Grau")
