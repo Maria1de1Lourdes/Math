@@ -24,7 +24,7 @@ st.markdown(
 
 # Caminho da pasta do aplicativo
 PASTA_APP = Path(__file__).parent
-CAMINHO_LOGO = PASTA_APP / "mat.jpeg"
+CAMINHO_LOGO = PASTA_APP / "Foto.jpg"
 
 # Exibir logo
 if CAMINHO_LOGO.exists():
@@ -32,7 +32,7 @@ if CAMINHO_LOGO.exists():
     with col2:
         st.image(str(CAMINHO_LOGO), use_container_width=True)
 else:
-    st.warning("⚠️ A imagem mat.jpeg não foi encontrada.")
+    st.warning("⚠️ A imagem Foto.jpg não foi encontrada.")
 
 # Título
 st.title("📈 Equação do 1º Grau")
