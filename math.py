@@ -3,6 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt 
 from pathlib import Path
 
+ st.markdown(f"""
+        <div style="background_color:pink ">
+        </div>
+     """, unsafe_allow_html=True)
+
 st.set_page_config( page_title="Equação do 1o Grau", page_icon=" 📈 ", layout="centered" )
 PASTA_APP = Path(file).parent
 CAMINHO_LOGO = PASTA_APP / "mat.jpeg"
